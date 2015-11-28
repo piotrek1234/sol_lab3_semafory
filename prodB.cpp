@@ -20,7 +20,7 @@ void produkuj()
 
 	cout << "[B chce wstawiac]" << endl;
 	mutex.down();
-		cout << "[B wstawia]" << endl;
+		cout << "[B wstawia]";
 		fifo.push('B');
 		fifo.de();
 		if(fifo.size() > 3)

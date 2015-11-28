@@ -14,5 +14,6 @@ int main (void)
 	Sem puste(9, 1236);
 	Sem info(1, 1237);
 
-	while(1);
+	cout << "Alokacja gotowa" << endl;
+	return 0;
 }
