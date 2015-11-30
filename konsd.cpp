@@ -18,15 +18,18 @@ Fifo fifo;
 
 void usuwaj()
 {
-	cout << "[Usuwacz: czekam na A]" << endl;
+	cout << "[Usuwacz: czekam na 1]" << endl;
 	czytA.down();
-		cout << "[Usuwacz: czekam na B]" << endl;
+		cout << "[Usuwacz: czekam na 2]" << endl;
 		czytB.down();
+			cout << "[Usuwacz: kolejka>3? ]" << endl;
+			min3.down();
 			cout << "[Usuwacz: chce usuwac]" << endl;
 			mutex.down();
 				cout << "[Usuwacz usuwa]";
 				fifo.pop();
 				fifo.de();
+				puste.up();
 			mutex.up();
 		nCzytA.up();
 		nCzytB.up();
