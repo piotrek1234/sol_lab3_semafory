@@ -22,8 +22,8 @@ void czytaj()
 	cout << "[1 czyta:";
 	cout << fifo.pop() << "]";
 	fifo.de();
-	puste.up();
 	mutex.up();
+	puste.up();
 }
 
 int main (void)

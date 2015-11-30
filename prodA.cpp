@@ -24,7 +24,9 @@ void produkuj()
 		fifo.push('A');
 		fifo.de();
 		if(fifo.size() > 3)
+		{
 			min3.up();
+		}
 	mutex.up();
 }
 
@@ -32,4 +34,5 @@ int main (void)
 {
 	for(int i=0; i<10; i++)
 		produkuj();
+	cout << "[A konczy]" << endl;
 }

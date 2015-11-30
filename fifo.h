@@ -23,12 +23,12 @@ public:
 	void push(int val)
 	{
 		buf[buf[1]] = val;
-		buf[1]++;
+		buf[1] = buf[1]+1;
 	}
-	int get() const { return buf[buf[0]]; }
+	char get() const { return buf[buf[0]]; }
 	char pop()
 	{
-		buf[0]++;
+		buf[0] = buf[0]+1;
 		return buf[buf[0]-1];
 	}
 	int size() const { return buf[1]-buf[0]; }
@@ -39,13 +39,15 @@ public:
 	}
 	void de()
 	{
-		int i;
+		int i, j=0;
 		for(i=buf[0]; i<buf[1]; i++)
+		{
 			cout << "[" << (char)buf[i] << "]";
+			j++;
+		}
+		for(i=j; i<9; i++)
+			cout << "[ ]";
 		cout << "<" << size() << ">" << endl;
-		/*for(;i-front<9; i++)
-			cout << "[ ]";*/
-		//cout << endl;
 	}
 private:
 	int* buf;

@@ -53,8 +53,6 @@ public:
 		operations[0].sem_num = 0;
 		/* Decrement by 1. */
 		operations[0].sem_op = -1;
-		/* Permit undo’ing. */
-		operations[0].sem_flg = SEM_UNDO;
 		return semop (semid, operations, 1);
 	}
 	
@@ -65,8 +63,6 @@ public:
 		operations[0].sem_num = 0;
 		/* Increment by 1. */
 		operations[0].sem_op = 1;
-		/* Permit undo’ing. */
-		operations[0].sem_flg = SEM_UNDO;
 		return semop (semid, operations, 1);
 	}
 private:
