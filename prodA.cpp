@@ -1,6 +1,7 @@
 /* producent A */
 
 #include <iostream>
+#include "delay.h"
 #include "fifo.h"
 #include "sem.h"
 
@@ -9,7 +10,6 @@ using namespace std;
 Sem mutex(1234);
 Sem min3(1235);
 Sem puste(1236);
-Sem info(1237);
 
 Fifo fifo;
 
@@ -33,6 +33,11 @@ void produkuj()
 int main (void)
 {
 	for(int i=0; i<10; i++)
+	{
+		#ifdef DELAY
+		delay();
+		#endif
 		produkuj();
-	cout << "[A konczy]" << endl;
+	}
+	cout << "            [A konczy]" << endl;
 }

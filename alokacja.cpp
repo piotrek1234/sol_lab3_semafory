@@ -12,7 +12,10 @@ int main (void)
 	Sem mutex(1, 1234);
 	Sem min3(0, 1235);
 	Sem puste(9, 1236);
-	Sem info(1, 1237);
+	Sem czytA(0, 1237);
+	Sem czytB(0, 1238);
+	Sem nCzytA(1, 1239);
+	Sem nCzytB(1, 1240);
 
 	cout << "Alokacja gotowa" << endl;
 	return 0;

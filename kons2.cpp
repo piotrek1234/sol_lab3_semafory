@@ -1,4 +1,4 @@
-/* konsument 1 */
+/* konsument 2 */
 
 #include <iostream>
 #include "fifo.h"
@@ -19,17 +19,17 @@ Fifo fifo;
 
 void czytaj()
 {
-	cout << "[1: nie czytalem?]" << endl;
-	nCzytA.down();
-		cout << "[1: kolejka>3?   ]" << endl;
+	cout << "[2: nie czytalem?]" << endl;
+	nCzytB.down();
+		cout << "[2: kolejka>3?   ]" << endl;
 		min3.down();
-			cout << "[1 chce czytac   ]" << endl;
+			cout << "[2 chce czytac   ]" << endl;
 			mutex.down();
-				cout << "[1 czyta: " << fifo.get() << "]";
+				cout << "[2 czyta: " << fifo.get() << "]";
 				fifo.de();
 			mutex.up();
 		min3.up();
-	czytA.up();
+	czytB.up();
 }
 
 int main (void)
