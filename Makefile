@@ -11,4 +11,4 @@ all: alokacja prodA prodB kons1 kons2 dealokacja konsd
 	$(CC) $(CFLAGS) konsd.cpp -o konsd
 
 clean:
-	rm -f alokacja dealokacja prodA prodB kons1 konsd
+	rm -f alokacja dealokacja prodA prodB kons1 kons2 konsd

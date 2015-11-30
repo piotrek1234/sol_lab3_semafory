@@ -10,10 +10,10 @@ using namespace std;
 Sem mutex(1234);
 Sem min3(1235);
 Sem puste(1236);
-Sem czytA(0, 1237);
-Sem czytB(0, 1238);
-Sem nCzytA(1, 1239);
-Sem nCzytB(1, 1240);
+Sem czytA(1237);
+Sem czytB(1238);
+Sem nCzytA(1239);
+Sem nCzytB(1240);
 
 Fifo fifo;
 
